@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="style/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Poppins:ital@1&family=Source+Code+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Source+Code+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Weather forecast</title>
+  </head>
+  <body>
+    <div class="weather-app"> 
+    <div class="container">
+      <div class="weather-app">
+        <form>
+          <div class="row cities">
+            <div class="col-sm-3"><h1>London</h1></div>
+            <div class="col-sm-3"><h1>Riga</h1></div>
+            <div class="col-sm-3"><h1>Paris</h1></div>
+            <div class="col-sm-3"><h1>Kyiv</h1></div>
+          </div>
+        </form>
+
+<form class="row" id="enterCity" onsubmit="return false;">
+     <div class="col-sm-8"> 
+       <input type="text" class="form-control shadow-sm" id="exampleInputCity" 
+         placeholder="Enter a city"
+         autofocus="off"
+         autocomplete="off">
+    </div>
+     <div class="col-sm-2"> 
+      <button type="button" class="btn btn-outline-primary shadow-sm" id="searchCity">Search</button>
+    </div>
+     <div class="col-sm-2"> 
+      <button type="button" class="btn btn-outline-primary shadow-sm" id="currentCity">Current</button>
+    </div>
+</form>      
+</div>
+<div class="row" id="currentTemperature">
+          <div class="col-sm-4">
+            <h2 class="selectedCity" id="selectedCity">London</h2>
+            <br />
+          <h4></h4>
+          </div>
+          <div class="col-sm-2"><p><span id="figure">15</span>°C</p></div>
+          <br />
+          <div class="col-sm-4">  
+            <span>              <img
+                src="https://cdn1.iconfinder.com/data/icons/weather-filled-two-color/614/429_-_Sunny-1024.png"
+                alt="cloudy"
+              />
+            </span>
+
+            </div>
+          </div>
+          <div class="col-sm-2">
+            Humidity: <span id="humidity"></span>%
+            <br />
+            Wind: <span id="wind"></span>km/h
+          </div>
+        </div>
+        <br />
+        <hr />
+        <br/>
+        <div class="row days">
+          <div class="col-sm-2">
+            <div class="card" style="width: 8rem">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Mon</li>
+                <li class="list-group-item">
+                  <span class="material-symbols-outlined"> sunny </span>
+                </li>
+                <li class="list-group-item">15°C</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card" style="width: 8rem">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Tues</li>
+                <li class="list-group-item">
+                  <span class="material-symbols-outlined"> rainy </span>
+                </li>
+                <li class="list-group-item">10°C</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card" style="width: 8rem">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Wedn</li>
+                <li class="list-group-item">
+                  <span class="material-symbols-outlined"> cloudy </span>
+                </li>
+                <li class="list-group-item">14°C</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card" style="width: 8rem">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Thurs</li>
+                <li class="list-group-item">
+                  <span class="material-symbols-outlined"> foggy </span>
+                </li>
+                <li class="list-group-item">17°C</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card" style="width: 8rem">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Fri</li>
+                <li class="list-group-item">
+                  <span class="material-symbols-outlined"> sunny </span>
+                </li>
+                <li class="list-group-item">20°C</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card" style="width: 6rem">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Sat</li>
+                <li class="list-group-item">
+                  <span class="material-symbols-outlined"> cloudy </span>
+                </li>
+                <li class="list-group-item">13°C</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </script>
+    <script src="src/script.js"></script>
+  </body>
+</html>

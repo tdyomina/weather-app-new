@@ -1,0 +1,32 @@
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: "PT Mono", monospace;
+  font-family: "Source Code Pro", monospace;
+  margin: 40px 400px 40px 100px;
+  color: #9d9d9d;
+}
+.weather-app {
+  border: 1px solid #9d9d9d;
+  padding: 40px;
+  border-radius: 10px;
+}
+h1,
+h2 {
+  font-weight: bold;
+}
+p {
+  font-size: 24px;
+}
+img {
+  max-width: 40px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
