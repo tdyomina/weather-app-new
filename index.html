@@ -31,7 +31,6 @@
       href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Source+Code+Pro:wght@300&display=swap"
       rel="stylesheet"
     />
-
     <title>Weather forecast</title>
   </head>
   <body>
@@ -40,13 +39,12 @@
       <div class="weather-app">
         <form>
           <div class="row cities">
-            <div class="col-sm-3"><h1>Milan</h1></div>
+            <div class="col-sm-3"><h1>London</h1></div>
             <div class="col-sm-3"><h1>Riga</h1></div>
             <div class="col-sm-3"><h1>Paris</h1></div>
             <div class="col-sm-3"><h1>Kyiv</h1></div>
           </div>
         </form>
-
 <form class="row" id="enterCity" onsubmit="return false;">
      <div class="col-sm-8"> 
        <input type="text" class="form-control shadow-sm" id="exampleInputCity" 
@@ -60,18 +58,19 @@
      <div class="col-sm-2"> 
       <button type="button" class="btn btn-outline-primary shadow-sm" id="currentCity">Current</button>
     </div>
-</form>      
+</form>
 </div>
 <div class="row" id="currentTemperature">
           <div class="col-sm-4">
-            <h2 class="selectedCity" id="selectedCity">London</h2>
+            <h2 id="selectedCity">City</h2>
             <br />
           <h4></h4>
           </div>
-          <div class="col-sm-2"><p><span id="figure">15</span>°C</p></div>
+          <div class="col-sm-2"><p><span id="figure">00</span>°C</p></div>
           <br />
           <div class="col-sm-4">  
-            <span>              <img
+            <span>
+              <img
                 src="https://cdn1.iconfinder.com/data/icons/weather-filled-two-color/614/429_-_Sunny-1024.png"
                 alt="cloudy"
               />
@@ -159,8 +158,7 @@
       </div>
     </div>
     </div>
-    This project was coded by <a href="tatianadyomina.engl@gmail.com">Tatiana Dyomina</a>
-     and is open-sourced on GitHub and hosted on Netlify. 
+    <h6>This project was coded by<a href="mailto:tatianadyomina.engl@gmail.com">Tatiana Dyomina</a> and is open-sourced on <a href="https://github.com/tdyomina/weather-app-new">GitHub</a> GitHub and hosted on <a href="https://classy-baklava-a34421.netlify.app/">Netlify</a></h6> 
     </script>
     <script src="src/script.js"></script>
   </body>
