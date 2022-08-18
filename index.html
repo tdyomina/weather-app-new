@@ -45,15 +45,16 @@
             <div class="col-sm-3"><h1>Kyiv</h1></div>
           </div>
         </form>
-<form class="row" id="enterCity" onsubmit="return false;">
+<form class="row" id="enterCity">
      <div class="col-sm-8"> 
        <input type="text" class="form-control shadow-sm" id="exampleInputCity" 
          placeholder="Enter a city"
-         autofocus="off"
-         autocomplete="off">
+         autofocus="on"
+         autocomplete="off"
+         >
     </div>
      <div class="col-sm-2"> 
-      <button type="button" class="btn btn-outline-primary shadow-sm" id="searchCity">Search</button>
+      <button type="submit" class="btn btn-outline-primary shadow-sm" id="searchCity">Search</button>
     </div>
      <div class="col-sm-2"> 
       <button type="button" class="btn btn-outline-primary shadow-sm" id="currentCity">Current</button>
@@ -62,11 +63,11 @@
 </div>
 <div class="row" id="currentTemperature">
           <div class="col-sm-4">
-            <h2 id="selectedCity">City</h2>
+            <h2 id="selectedCity"></h2>
             <br />
           <h4></h4>
           </div>
-          <div class="col-sm-2"><p><span id="figure">00</span>°C</p></div>
+          <div class="col-sm-2"><p><span id="figure"></span>°C</p></div>
           <br />
           <div class="col-sm-4">  
             <span>
@@ -158,7 +159,7 @@
       </div>
     </div>
     </div>
-    <h6>This app was coded by <a href="mailto:tatianadyomina.engl@gmail.com">Tatiana</a> and is open-sourced on <a href="https://github.com/tdyomina/weather-app-new" target="_blank">GitHub</a>  and hosted on <a href="https://classy-baklava-a34421.netlify.app/" target="_blank">Netlify</a></h6> 
+    <h6>This project was coded by<a href="mailto:mail@htmlacademy.ru">Tatiana Dyomina</a> and is open-sourced on <a href="http://github.com">GitHub</a> GitHub and hosted on <a href="https://app.netlify.com/teams/tdyomina/overview">Netlify</a></h6> 
     </script>
     <script src="src/script.js"></script>
   </body>
