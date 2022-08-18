@@ -39,30 +39,23 @@ function replaceCityName(response) {
   windSpeed.innerHTML = windSpeedValue;
 }
 
-let cityInput = "Kharkiv";
-searchCity(cityInput);
-
-function searchCity(cityInput) {
-  let apiKey = "449b625b92babac43b47ea470588167d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(replaceCityName);
-}
-
 function showCity(event) {
   event.preventDefault();
-  let cityInput = document.getElementById("exampleInputCity").value;
+  let cityInput = document.querySelector("#exampleInputCity").value;
   searchCity(cityInput);
 }
-let cityName = document.querySelector("#searchCity");
-cityName.addEventListener("click", showCity);
 
 // current button processing
 function yourCity(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
-let curretCityName = document.querySelector("#currentCity");
-curretCityName.addEventListener("click", yourCity);
+
+function searchCity(cityInput) {
+  let apiKey = "449b625b92babac43b47ea470588167d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(replaceCityName);
+}
 
 // geoposition weather
 
@@ -71,7 +64,13 @@ function handlePosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}`).then(replaceCityName);
 }
+let cityName = document.querySelector("#enterCity");
+cityName.addEventListener("submit", showCity);
+let curretCityName = document.querySelector("#currentCity");
+curretCityName.addEventListener("click", yourCity);
 
+let myInput = "Kharkiv";
+searchCity(myInput);
 // farenheit calculation
 
 //document.getElementById("celsium").addEventListener("click", function (event) {
