@@ -18,11 +18,11 @@ h1,
 h2 {
   font-weight: bold;
 }
-p {
-  font-size: 24px;
+.tempSection {
+  font-size: 60px;
 }
 img {
-  max-width: 40px;
+  max-width: 230px;
 }
 a {
   text-decoration: none;
